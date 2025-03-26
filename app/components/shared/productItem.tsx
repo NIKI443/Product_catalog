@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button } from '~/components/ui/button'
 import { useProductStore } from '~/store/useProductStore'
 
@@ -7,8 +7,7 @@ interface Props {
 }
 
 export const ProductItem: React.FC<Props> = ({ product }) => {
-
-	const { addProductCart, deleteProductCart, carts } = useProductStore()
+	const { addProductCart, deleteProductCart } = useProductStore()
 	return (
 		<div className='border-2 border-purple-500 rounded-2xl p-3 cursor-pointer hover:shadow-violet-200 hover:shadow-lg'>
 			<div className='w-full h-45 mb-3 rounded-2xl flex items-center justify-center overflow-hidden'>
